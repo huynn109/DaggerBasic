@@ -1,9 +1,22 @@
 package com.huynn109.daggerbasic
 
-class UserRepository(
-    private val localDataSource: UserLocalDataSource,
-    private val remoteDataSource: UserRemoteDataSource
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class UserRepository @Inject constructor(
+    val localDataSource: UserLocalDataSource,
+    val remoteDataSource: UserRemoteDataSource
 ) {}
 
-class UserLocalDataSource() {}
-class UserRemoteDataSource(private val loginService: LoginService) {}
+class UserLocalDataSource @Inject constructor() {
+    override fun toString(): String = "UserLocalDataSource"
+}
+
+class UserRemoteDataSource @Inject constructor(val loginService: LoginService) {
+    override fun toString(): String = "UserRemoteDataSource"
+
+    fun login(): String {
+        return "Login ".plus(toString())
+    }
+}

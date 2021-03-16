@@ -10,8 +10,19 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun equal_applicationGraph(){
+        val applicationGraph: ApplicationGraph = DaggerApplicationGraph.create()
+        val applicationGraph2: ApplicationGraph = DaggerApplicationGraph.create()
+        assert(applicationGraph != applicationGraph2)
+    }
+
+    @Test
+    fun equal_userRepositorySingleton(){
+        val applicationGraph: ApplicationGraph = DaggerApplicationGraph.create()
+        val userRepo = applicationGraph.userRepository()
+        val userRepo2 = applicationGraph.userRepository()
+        assert(userRepo == userRepo2)
     }
 }

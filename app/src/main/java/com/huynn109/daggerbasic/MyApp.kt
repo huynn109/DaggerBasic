@@ -3,5 +3,7 @@ package com.huynn109.daggerbasic
 import android.app.Application
 
 class MyApp : Application() {
-    var appContainer = AppContainer()
+
+    // Create an instance of the application graph
+    var applicationComponent: ApplicationComponent = DaggerApplicationComponent.create()
 }
