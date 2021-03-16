@@ -6,9 +6,11 @@ import retrofit2.Retrofit
 
 
 class LoginActivity : AppCompatActivity() {
+
     private lateinit var appContainer: AppContainer
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var loginUserData: LoginUserData
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
