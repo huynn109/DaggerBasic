@@ -3,7 +3,7 @@ package com.huynn109.daggerbasic
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import retrofit2.Retrofit
+import com.huynn109.daggerbasic.component.LoginComponent
 import javax.inject.Inject
 
 

@@ -1,5 +1,6 @@
-package com.huynn109.daggerbasic
+package com.huynn109.daggerbasic.module
 
+import com.huynn109.daggerbasic.LoginService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

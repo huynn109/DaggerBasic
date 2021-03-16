@@ -1,16 +1,10 @@
-package com.huynn109.daggerbasic
+package com.huynn109.daggerbasic.component
 
-import dagger.Component
-import dagger.Module
+import com.huynn109.daggerbasic.ActivityScope
+import com.huynn109.daggerbasic.LoginActivity
+import com.huynn109.daggerbasic.LoginPasswordFragment
+import com.huynn109.daggerbasic.LoginUserFragment
 import dagger.Subcomponent
-import javax.inject.Singleton
-
-@Singleton
-@Component(modules = [NetworkModule::class, SubComponentModule::class])
-interface ApplicationComponent {
-    fun userRepository(): UserRepository
-    fun loginComponent(): LoginComponent.Factory
-}
 
 @ActivityScope
 @Subcomponent
